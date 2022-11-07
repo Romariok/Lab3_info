@@ -40,6 +40,7 @@ if k == 1:
 else:
     print("Введите вашу группу")
     group = r''.join(str(input()))
+    group = re.escape(group)
     print("Введите путь вашего теста относительно программы")
     path = str(input())
     s = readfile(path)

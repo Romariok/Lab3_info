@@ -11,8 +11,7 @@ def readfile(s):
 print("Введите тип взаимодействия с программой\n1 - Встроенные тесты\n2 - Саммостоятельное введений смайлика и текста")
 k = int(input())
 if k == 1:
-    smile = r'=-|'
-
+    smile = r'=-\|'
     t1 = re.findall(smile, readfile("Smile_tests/Smile_test1.txt"))
     t2 = re.findall(smile, readfile("Smile_tests/Smile_test2.txt"))
     t3 = re.findall(smile, readfile("Smile_tests/Smile_test3.txt"))
@@ -27,6 +26,7 @@ if k == 1:
 else:
     print("Введите ваш смайлик")
     smile = r''.join(str(input()))
+    smile = re.escape(smile)
     print("Введите путь вашего теста относительно программы")
     path = str(input())
     t1 = re.findall(smile, readfile(path))
