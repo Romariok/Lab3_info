@@ -27,7 +27,7 @@ if k == 1:
 else:
     print("Введите ваш смайлик")
     smile = r''.join(str(input()))
-    print("Введите путь вашего теста в формате .txt")
+    print("Введите путь вашего теста относительно программы")
     path = str(input())
-    t1 = re.findall(smile, readfile("Smile_tests/Smile_test1.txt"))
+    t1 = re.findall(smile, readfile(path))
     print("Количество вхождений смайлика в тексте = ", len(t1))

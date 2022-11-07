@@ -37,14 +37,22 @@ def subtime(s):
     tmp = re.sub(t1,"(TMD) ", tmp)
     return tmp
 
-print(subtime(readfile("dop1_tests/dop1_test.txt")))
-print('')
-print(subtime(readfile("dop1_tests/dop1_test1.txt")))
-print('')
-print(subtime(readfile("dop1_tests/dop1_test2.txt")))
-print('')
-print(subtime(readfile("dop1_tests/dop1_test3.txt")))
-print('')
-print(subtime(readfile("dop1_tests/dop1_test4.txt")))
-print('')
-print(subtime(readfile("dop1_tests/dop1_test5.txt")))
+
+print("Введите тип взаимодействия с программой\n1 - Встроенные тесты\n2 - Саммостоятельное введений текста")
+k = int(input())
+if k == 1:
+    print(subtime(readfile("dop1_tests/dop1_test.txt")))
+    print('')
+    print(subtime(readfile("dop1_tests/dop1_test1.txt")))
+    print('')
+    print(subtime(readfile("dop1_tests/dop1_test2.txt")))
+    print('')
+    print(subtime(readfile("dop1_tests/dop1_test3.txt")))
+    print('')
+    print(subtime(readfile("dop1_tests/dop1_test4.txt")))
+    print('')
+    print(subtime(readfile("dop1_tests/dop1_test5.txt")))
+else:
+    print("Введите путь вашего теста относительно программы")
+    path = str(input())
+    print(subtime(readfile(path)))
